@@ -4,7 +4,8 @@
 * Download and install Vagrant: https://www.vagrantup.com/downloads.html
 * Do `vagrant up` which creates an Ubuntu vm 
 * Do `vagrant ssh` which logs you into the VM
-* Install Docker on the Ubuntu machine: https://docs.docker.com/engine/installation/ubuntulinux/
+* Install Docker on the Ubuntu machine: https://docs.docker.com/engine/installation/ubuntulinux/<br/>
+  **tl;dr**
   * `sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D`
   * Open /etc/apt/sources.list.d/docker.list in e.g. Vim
   * Insert `deb https://apt.dockerproject.org/repo ubuntu-trusty main` and then save & close
