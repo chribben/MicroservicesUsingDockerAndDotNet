@@ -4,4 +4,6 @@ echo:
         - "5004:5004"
     container_name: "echo"
 heartbeat:
+    links:
+        - echo
     build: heartbeat
