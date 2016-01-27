@@ -38,9 +38,11 @@ doc/
 .idea/*
 *.iml
 .project
+project.lock.json
 
 # Ruby Managers
 .rbenv
 .ruby-gemset
 .ruby-version
 .rvmrc
+
