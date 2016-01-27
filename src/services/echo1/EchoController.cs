@@ -8,7 +8,7 @@ namespace Echo.Controllers
         [Route("/"), HttpPost]
         public IActionResult Echo([FromBody] string input)
         {
-            return Ok($"Echo server: {input}");
+            return Ok($"Echo server: {input}\n");
         }
     }
 }
