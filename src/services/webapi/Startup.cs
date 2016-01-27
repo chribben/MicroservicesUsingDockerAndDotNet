@@ -1,8 +1,8 @@
-using System;
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Http;
-using Microsoft.Framework.DependencyInjection;
-namespace WebApi
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+
+namespace HelloMvc
 {
     public class Startup
     {
@@ -11,7 +11,7 @@ namespace WebApi
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             app.UseMvc();
         }
