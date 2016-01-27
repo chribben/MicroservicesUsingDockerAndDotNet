@@ -1,9 +1,12 @@
 using System;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace Heartbeat
 {
     public static class Heart {
+        private static HttpClient _client = new HttpClient();
+
         public static void Main(string[] args)
         {
             Pulse().Wait();
@@ -18,9 +21,9 @@ namespace Heartbeat
             }
         }
         
-        public static void Beat()
+        public static async void Beat()
         {
-            Console.WriteLine(DateTime.UtcNow.ToString("O"));
+            Console.WriteLine(await _client.GetStringAsync("http://localhost:5000/api/front"));
         }
     }
 }
