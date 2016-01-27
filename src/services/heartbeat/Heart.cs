@@ -22,7 +22,7 @@ namespace Heartbeat
         
         public static async Task Beat()
         {
-            Console.WriteLine(await _client.GetStringAsync("http://services_echo_1:5004"));
+            Console.WriteLine(await _client.GetStringAsync("http://echo:5004"));
         }
     }
 }
