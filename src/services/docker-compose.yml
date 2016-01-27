@@ -2,3 +2,8 @@ echo:
     build: echo1
     ports:
         - "5004:5004"
+    container_name: "echo"
+heartbeat:
+    links:
+        - echo
+    build: heartbeat

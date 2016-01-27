@@ -9,7 +9,7 @@ namespace Echo.Controllers
         [Route("/"), HttpGet]
         public IActionResult Echo()
         {
-            return Ok(DateTime.UtcNow.ToString("O"));
+            return Ok(DateTime.UtcNow.ToString("yyyy-MM-dd hh:mm:ss"));
         }
     }
 }
