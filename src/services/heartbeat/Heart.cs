@@ -16,14 +16,13 @@ namespace Heartbeat
         {
             while (true)
             {
-                Beat();
-                await Task.Delay(1000);
+                Task.WaitAll(new[] { Beat(), Task.Delay(1000) });
             }
         }
         
-        public static async void Beat()
+        public static async Task Beat()
         {
-            Console.WriteLine(await _client.GetStringAsync("http://localhost:5000/api/front"));
+            Console.WriteLine(await _client.GetStringAsync("http://localhost:5004"));
         }
     }
 }
